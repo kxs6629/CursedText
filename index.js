@@ -1,17 +1,23 @@
-const http = require('http');
-
-const hostname = 'localhost';
-const port = 3000;
-
+// Module imports
+const express = require('express');
 const textParse = require('./modules/parseText.js');
 
-const server = http.createServer((req,res) => {
-    res.statusCode = 200;
-    res.setHeader('content-type', 'text/plain');
-    res.end('Hello World!');
+// Create Server
+const app = express();
+
+app.listen(3000, () =>{
+    console.log(__dirname);
+    console.log("Application listening on port 3000")
+})
+
+app.use(express.static(__dirname));
+
+// Routes
+
+app.get('/', (req,res) => {
+    res.sendFile(__dirname+ '/pages/index.html');
 });
 
-server.listen(port,hostname, () => {
-    console.log(textParse.readText('a'));
-    console.log(`Server started at http://${hostname}:${port}/` );
-});
+app.post('/',(req,res) =>{
+    res.sendFile(__dirname+ '/pages/results.html');
+})
