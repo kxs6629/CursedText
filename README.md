@@ -21,7 +21,7 @@ npm init
 3. After downloading any dependencies, run the server using:
 
 ```
-node index.js
+npm start
 ```
 
 4. From there, head over to http://localhost:3000/ to use the main page. This page allows interaction between the website and server. 
