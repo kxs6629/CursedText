@@ -1,7 +1,14 @@
-var storedText;
+const fs = require('fs');
 
-function readText(textToparse){
-    storedText = 'testResults';
+const storedText = fs.readFile('data/kjv.txt', (err,output) => {
+    if(err) throw err;
+    output.toString();
+});
+
+
+
+function CheckText(textToParse){
+    
 }
 
 module.exports = {

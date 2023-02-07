@@ -14,7 +14,7 @@ This proejct serves as a simple node.js refresher. Inspired by reading one too m
 
 2. Run npm init to download any dependencies:
 
-```
+``` 
 npm init
 ```
 
@@ -25,3 +25,9 @@ npm start
 ```
 
 4. From there, head over to http://localhost:3000/ to use the main page. This page allows interaction between the website and server. 
+
+## TODO
+* Styling
+* Data structure for reading in and parsing text / Or find another solution
+* Search function for chosen data structure 
+* Populate results page with computed results

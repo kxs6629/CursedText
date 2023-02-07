@@ -8,7 +8,6 @@ const textParse = require('./controllers/parseText.js');
 const app = express();
 
 app.listen(3000, () =>{
-    console.log(__dirname);
     console.log("Application listening on port 3000")
 })
 
