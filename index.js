@@ -25,6 +25,7 @@ app.get('/', (req,res) => {
 app.post('/',(req,res) =>{
     const {textcheck} = req.body;
     res.render('results', {
-        testCheck: textcheck
+        // Gotta resolve this promise
+        testCheck: textParse.CheckText(textcheck).then(function(value){return value;})
     });
 });
