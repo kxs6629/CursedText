@@ -22,10 +22,10 @@ app.get('/', (req,res) => {
     res.render('index');
 });
 
-app.post('/',(req,res) =>{
+app.post('/',async (req,res) =>{
     const {textcheck} = req.body;
     res.render('results', {
         // Gotta resolve this promise
-        testCheck: textParse.CheckText(textcheck).then(function(value){return value;})
+        testCheck: await textParse.CheckText(textcheck)
     });
 });
